@@ -350,6 +350,8 @@ footer a:hover { color: var(--pacblue); }
   border-radius: 4px !important;
   font-weight: bold !important;
   font-size: 0.9rem !important;
+  border: none !important;
+  text-decoration: none !important;
 }
 
 .contact-btn:hover {
@@ -845,4 +847,137 @@ footer a:hover { color: var(--pacblue); }
 .services-header .services-intro {
   margin-bottom: 0;
   font-weight: normal;
+}
+/* Team Section */
+.team-wrapper {
+  background: var(--gray);
+  background-image: 
+    linear-gradient(90deg, rgba(46,80,119,0.03) 1px, transparent 1px),
+    linear-gradient(rgba(46,80,119,0.03) 1px, transparent 1px);
+  background-size: 15px 15px;
+  padding: 3rem 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.team-wrapper > * {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.team-wrapper h2 {
+  color: var(--mnblue);
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  flex: 0 0 300px;
+  text-align: center;
+}
+
+.team-headshot {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 4px solid black;
+  display: block;
+}
+
+.team-name {
+  color: var(--mnblue);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.team-experience {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+/* Service Areas */
+.service-areas {
+  background: var(--yelloworange);
+  padding: 3rem 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  text-align: center;
+}
+
+.service-areas > * {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.service-areas h2 {
+  color: var(--white);
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.areas-grid {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.area-item {
+  flex: 0 0 400px;
+  text-align: center;
+}
+
+.map-container {
+  margin-bottom: 2rem;
+  position: relative;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 3px solid black;
+}
+
+.location-icon {
+  display: none;
+}
+
+.area-info h3 {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.area-info p {
+  color: var(--white);
+  margin-bottom: 0.5rem;
 }
