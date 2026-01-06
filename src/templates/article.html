@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Blog | Benevolent Senior Services</title>
+  <title>{{title}} | Benevolent Senior Services</title>
   <link rel="stylesheet" href="/src/styles/main.css">
 </head>
 <body>
   <header>
     <nav>
-      <a href="/"><img src="/logo.png" alt="Benevolent Senior Services"></a>
+      <a href="/">
+        <img src="/logo.png" alt="Benevolent Senior Services">
+      </a>
       <ul>
         <li><a href="/#home">Home</a></li>
         <li><a href="/#serve">Who We Serve</a></li>
@@ -27,21 +29,16 @@
   </header>
 
   <main>
-    <h1>Our Blog</h1>
-    <div class="blog-list">
-      <article>
-    <h2><a href="/benefits-of-assisted-living">What are the benefits of assisted living?</a></h2>
-    <p class="meta">Dawn Bare • June 29, 2021</p>
-  </article>
-<article>
-    <h2><a href="/four-helpful-tips-to-reduce-fall-risks-for-seniors">Four Helpful Tips to Reduce Fall Risks for Seniors</a></h2>
-    <p class="meta">Victoria Zeccola • July 12, 2021</p>
-  </article>
-<article>
-    <h2><a href="/six-options-for-financing-senior-living">Six Options for Financing the Cost of Senior Living</a></h2>
-    <p class="meta">Victoria Zeccola • July 26, 2021</p>
-  </article>
-    </div>
+    <article>
+      <h1>{{title}}</h1>
+      <p class="meta">
+        <span class="author">{{author}}</span>
+        <span class="date">{{date}}</span>
+      </p>
+      <div class="content">
+        {{content}}
+      </div>
+    </article>
   </main>
 
   <footer>

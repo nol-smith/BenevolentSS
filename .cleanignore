@@ -1,0 +1,23 @@
+# Keep these
+src/
+build.js
+package.json
+netlify.toml
+robots.txt
+README.md
+index.html
+blog/
+benefits-of-assisted-living/
+four-helpful-tips-to-reduce-fall-risks-for-seniors/
+six-options-for-financing-senior-living/
+logo.png
+logo.svg
+favicon-32x32.png
+hero-bg.jpg
+services-bg.jpg
+faq-bg.jpg
+icon-bg.png
+social.png
+bss-default-image.jpg
+bss-icon.svg
+bubbles.svg
