@@ -23,7 +23,7 @@ body {
   overflow-x: hidden;
 }
 
-h1 { font-size: 2.5rem; color: var(--mnblue); margin-bottom: 1rem; text-transform: uppercase; white-space: nowrap; }
+h1 { font-size: 3rem; color: var(--mnblue); margin-bottom: 1rem; text-transform: uppercase; white-space: nowrap; }
 h2 { font-size: 2rem; color: var(--engred); margin: 1.5rem 0 0.5rem; }
 p { margin-bottom: 1rem; }
 a { color: var(--pacblue); text-decoration: none; }
@@ -240,29 +240,30 @@ footer a:hover { color: var(--pacblue); }
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .bss-icon {
-  height: 5rem;
+  height: 3.5rem;
   width: auto;
 }
 
 .free-service {
-  background: var(--pacblue);
-  color: var(--white);
+  background: transparent;
+  color: var(--pacblue);
   font-size: 1rem;
   font-weight: bold;
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
+  padding: 0;
+  border-radius: 0;
   display: inline-block;
   margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--pacblue);
 }
 
 .main-description {
   font-size: 1.2rem;
   max-width: 700px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.5rem;
   color: #555;
 }
 
@@ -463,7 +464,7 @@ footer a:hover { color: var(--pacblue); }
 }
 
 .popup-btn {
-  background: var(--yelloworange);
+  background: linear-gradient(45deg, var(--yelloworange), #ff8c42);
   color: var(--white);
   border: none;
   padding: 1.2rem 3rem;
@@ -472,6 +473,9 @@ footer a:hover { color: var(--pacblue); }
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 1px;
 }
 
 .popup-btn:hover {
@@ -485,9 +489,9 @@ footer a:hover { color: var(--pacblue); }
     url('/Couple.avif');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
   padding: 4rem 0 4rem 0;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .serve-wrapper {
@@ -499,6 +503,7 @@ footer a:hover { color: var(--pacblue); }
 @media (max-width: 768px) {
   #serve {
     background-attachment: scroll;
+    min-height: auto;
   }
 }
 
@@ -613,4 +618,231 @@ footer a:hover { color: var(--pacblue); }
 
 .serve-group li:before {
   display: none;
+}
+
+/* Services Section */
+.services-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.services-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+  gap: 3rem;
+}
+
+.service-item.left {
+  flex-direction: row;
+}
+
+.service-item.right {
+  flex-direction: row-reverse;
+}
+
+.service-content {
+  flex: 1;
+  position: relative;
+}
+
+.service-number {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--pacblue);
+  opacity: 0.2;
+  position: absolute;
+  top: -2rem;
+  left: -1rem;
+  z-index: 1;
+}
+
+.service-content h3 {
+  color: var(--mnblue);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.service-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.service-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-content li {
+  padding: 0.5rem 0;
+  color: #666;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.service-content li:before {
+  content: "✓";
+  color: var(--pacblue);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.service-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  .service-item,
+  .service-item.right {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .service-number {
+    position: static;
+    margin-bottom: 1rem;
+  }
+  
+  .service-image {
+    max-width: 100%;
+  }
+}
+/* Care Options with Side Images */
+.care-options-with-images {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.care-side-image {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+.care-side-image.left {
+  align-self: flex-start;
+}
+
+.care-side-image.right {
+  align-self: flex-end;
+}
+
+@media (max-width: 768px) {
+  .care-options-with-images {
+    flex-direction: column;
+  }
+  
+  .care-side-image {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+  }
+}
+/* Centered Home Content */
+.home-content-centered {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Fun Badge for No Cost Consultation */
+.free-service-badge {
+  display: inline-block;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.badge-text {
+  background: linear-gradient(45deg, var(--mnblue), var(--pacblue));
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.4rem 1.5rem;
+  border-radius: 0;
+  display: inline-block;
+  box-shadow: none;
+  animation: pulse 2s infinite;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 1px;
+}
+
+.badge-text::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+.popup-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+/* Services Header */
+.services-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-header h2 {
+  margin-bottom: 0.5rem;
+}
+
+.services-header .services-intro {
+  margin-bottom: 0;
+  font-weight: normal;
 }
