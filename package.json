@@ -1,0 +1,7 @@
+{
+  "name": "benevolent-ss",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'Already built' && exit 0"
+  }
+}
