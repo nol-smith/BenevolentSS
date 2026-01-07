@@ -774,6 +774,11 @@ footer a:hover { color: var(--pacblue); }
   
   .service-image {
     max-width: 100%;
+    order: -1;
+  }
+  
+  .service-content {
+    order: 1;
   }
 }
 /* Care Options with Side Images */
