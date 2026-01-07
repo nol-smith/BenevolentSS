@@ -762,9 +762,11 @@ footer a:hover { color: var(--pacblue); }
 
 @media (max-width: 768px) {
   .service-item,
-  .service-item.right {
-    flex-direction: column;
+  .service-item.right,
+  .service-item.left {
+    flex-direction: column !important;
     text-align: center;
+    gap: 1rem;
   }
   
   .service-number {
@@ -774,11 +776,12 @@ footer a:hover { color: var(--pacblue); }
   
   .service-image {
     max-width: 100%;
-    order: -1;
+    order: -1 !important;
+    margin: 0 auto;
   }
   
   .service-content {
-    order: 1;
+    order: 1 !important;
   }
 }
 /* Care Options with Side Images */
