@@ -470,7 +470,44 @@
       
       // Add active class to clicked button
       event.target.classList.add('active');
+      
+      // Update URL without page reload
+      const newUrl = tabName === 'home' ? '/' : `/${tabName}`;
+      window.history.pushState({tab: tabName}, '', newUrl);
+      
+      // Scroll to top
+      window.scrollTo(0, 0);
     }
+
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', function(event) {
+      const path = window.location.pathname;
+      const tabName = path === '/' ? 'home' : path.substring(1);
+      
+      if (document.getElementById(tabName)) {
+        // Hide all panels
+        document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        
+        // Show correct panel
+        document.getElementById(tabName).classList.add('active');
+        document.querySelector(`[onclick="showTab('${tabName}')"]`).classList.add('active');
+      }
+    });
+
+    // Load correct tab on page load
+    window.addEventListener('load', function() {
+      const path = window.location.pathname;
+      const tabName = path === '/' ? 'home' : path.substring(1);
+      
+      if (tabName !== 'home' && document.getElementById(tabName)) {
+        document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        
+        document.getElementById(tabName).classList.add('active');
+        document.querySelector(`[onclick="showTab('${tabName}')"]`).classList.add('active');
+      }
+    });
 
     function showPopup() {
       document.getElementById('carePopup').style.display = 'flex';
